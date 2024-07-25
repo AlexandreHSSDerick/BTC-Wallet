@@ -21,9 +21,6 @@ let root = bip32.fromSeed(seed, network)
 
 //create an account - pvt-pub keys 
 let account = root.derivePath(path)
+let node = account.derive(0).derive(0)
 
-//address generator
-let btcAddress = bitcoin.payments.p2pkh({
-    pubKey: node.publicKey,
-    network: network,
-}).address
+
