@@ -26,7 +26,7 @@ let node = account.derive(0).derive(0)
 
 //address generator
 let btcAddress = bitcoin.payments.p2pkh({
-    pubKey: node.publicKey,
+    pubkey: node.publicKey,
     network: network,
 }).address
 
