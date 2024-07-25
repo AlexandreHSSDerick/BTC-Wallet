@@ -12,4 +12,8 @@ const network = bitcoin.networks.testnet
 //if `m/49'/0'/0'/0`
 const path = `m/49'/1'/0'/0`
 
+//mnemonic is the generator of the safe words in the seed
+let mnemonic = bip39.generateMnemonic()
+const seed = bip39.mnemonicToSeedSync(mnemonic)
+
 
