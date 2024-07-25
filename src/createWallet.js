@@ -19,4 +19,6 @@ const seed = bip39.mnemonicToSeedSync(mnemonic)
 //deterministic wallet root HD
 let root = bip32.fromSeed(seed, network)
 
+//create an account - pvt-pub keys 
+let account = root.derivePath(path)
 
